@@ -1294,10 +1294,8 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
             let jawab = `「 اكبر *${command}* في الجروب هو @${jodoh.split('@')[0]} 」◣
 	    「 صح؟ 🥲 」◣`
             let ments = [me, jodoh]
-            let buttons = [
-                        { buttonId: '「 يب 😂 」◣', buttonText: { displayText: '「 يب 😂 」◣' }, type: 1 }
-                    ]
-                    await GojoMdNx.sendText(m.chat, jawab, GojoMdNx.user.name, m, {mentions: ments})
+            
+             GojoMdNx.sendText(m.chat, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
             break
 case 'when':
