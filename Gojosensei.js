@@ -1297,7 +1297,7 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
             let buttons = [
                         { buttonId: '「 يب 😂 」◣', buttonText: { displayText: '「 يب 😂 」◣' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
+                    await GojoMdNx.sendText(m.chat, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
             break
 case 'when':
@@ -2370,7 +2370,7 @@ break
                 GojoMdNx.sendMessage(m.chat, { image: { url: random.female }, caption: `「 بنت 」「👧🏻」◣` }, { quoted: m })
             }
 	    break
-            case 'قهوة': case 'شاي': {
+            case 'روقان': case 'شاي': {
             let buttons = [
                     {buttonId: `شاي`, buttonText: {displayText: '➡️'}, type: 1}
                 ]
