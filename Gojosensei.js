@@ -1295,7 +1295,7 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${san
 	    「 صح؟ 🥲 」◣`
             let ments = [me, jodoh]
             
-             GojoMdNx.sendText(m.chat, jawab, GojoMdNx.user.name, m, {mentions: ments})
+             GojoMdNx.sendText(m.chat, 'حرام لا تسب الناس', m, {mentions: ments})
             }
             break
 case 'when':
