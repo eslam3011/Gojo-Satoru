@@ -1118,7 +1118,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             break
 		
 	case 'react': {
-                if (!isCreator) throw mess.owner
+                if (!isCreator || !isPremium) throw mess.owner
                 reactionMessage = {
                     react: {
                         text: args[0],
