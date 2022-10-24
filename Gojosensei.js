@@ -2077,7 +2077,7 @@ break
                     image: { url: images },
                     caption: ` `,
                     footer: GojoMdNx.user.name,
-                    buttons: buttons,
+                    
                     headerType: 4
                 }
                 GojoMdNx.sendMessage(m.chat, buttonMessage, { quoted: m })
