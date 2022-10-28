@@ -1118,12 +1118,10 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             }
             break
 		
-	case 'react': {
-                if (!isCreator || !isPremium) throw mess.owner
+	case 'انا جيت': {
+                if (!isCreator) throw `نورت\ي حبي 😉`
                 reactionMessage = {
-                    react: {
-                        text: args[0],
-                        key: { remoteJid: m.chat, fromMe: true, id: quoted.id }
+                    text: 'لقد حضر المالك الاعظم اسلام 🖤🖤'
                     }
                 }
                 GojoMdNx.sendMessage(m.chat, reactionMessage)
@@ -3274,11 +3272,7 @@ reply(`*「 تم اضافة الرسالة」◣*'${text}'
                 reply('*「 تم 」◣*')
             }
             break
-	    case 'انا جيت': {
-                if (!isCreator) return reply('نورت\ي حبي😉')
-                GojoMdNx.sendText(m.chat, 'لقد حضر المالك الاعظم اسلام🖤🖤', m, {mentions: ments})
-            }
-            break	
+	    	
 		
             case 'ping': case 'botstatus': case 'statusbot': {
                 const used = process.memoryUsage()
@@ -3875,12 +3869,12 @@ case 'القائمة': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')},
-                            
+                            hydratedFooterText: `${pushname}`,
                             
                         }
                     }
                 }), { userJid: m.chat })
-                GojoMdNx.sendMessage(m.chat, anu, { messageId: template.key.id })
+                GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
             }
 break
 case 'mainmenu':
