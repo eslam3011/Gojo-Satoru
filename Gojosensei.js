@@ -1118,15 +1118,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             }
             break
 		
-	case 'انا جيت': {
-                if (!isCreator) return reply( `نورت\ي حبي 😉`)
-                reactionMessage = {
-                    text: 'لقد حضر المالك الاعظم اسلام 🖤🖤'
-                    }
-                }
-                GojoMdNx.sendMessage(m.chat, { text: `لقد حضر المالك الاعظم اسلام 🖤🖤` }, { quoted: m })
-            }
-        break
+	
 		
 		
             case 'kuismath': case 'math': {
