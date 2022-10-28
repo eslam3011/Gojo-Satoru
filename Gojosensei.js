@@ -3275,8 +3275,8 @@ reply(`*「 تم اضافة الرسالة」◣*'${text}'
             }
             break
 	    case 'انا جيت': {
-                if (!isCreator) return replay(`نورت\ي حبي😉`)
-                reply('لقد حضر المالك الاعظم اسلام🖤🖤')
+                if (!isCreator) return reply('نورت\ي حبي😉')
+                GojoMdNx.sendText(m.chat, 'لقد حضر المالك الاعظم اسلام🖤🖤', m, {mentions: ments})
             }
             break	
 		
@@ -3880,7 +3880,7 @@ case 'القائمة': {
                         }
                     }
                 }), { userJid: m.chat })
-                GojoMdNx.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                GojoMdNx.sendMessage(m.chat, anu, { messageId: template.key.id })
             }
 break
 case 'mainmenu':
