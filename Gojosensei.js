@@ -812,6 +812,12 @@ if (q.includes('--help')) return reply(examkosong)
  reply('Success! Your Bood Is Full')
  }
  break
+ case 'انا جيت':{
+ if (!isCreator) return reply('نورت\ي حبي 😉') 
+ 
+  reply('لقد حضر المالك الاعظم اسلام 🖤🖤')
+  }
+  break		
  case 'hunt': case 'hunting': {
 if (q.includes('--help')) return reply(examkosong) 
  if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
@@ -3632,7 +3638,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 「 نرحب بالجميع. 」◣`)
             }
             break
-case '9807786789678': {
+case 'القائمة': {
   	anu = `
 ┏━「 *${botname}* 」━━⭓ 
 ┃╔══☯︎「 MAIN 」☯︎
@@ -3869,17 +3875,7 @@ case '9807786789678': {
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')},
                             hydratedFooterText: `${pushname}`,
-                            hydratedButtons: [{
-                                urlButton: {
-                                    displayText: '「 قناتي 」「📍」◣',
-                                    url: `${myweb}`
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: '「 المالك 」「👤」◣',
-                                    id: `${prefix}owner`
-                                }
-                            }]
+                            
                         }
                     }
                 }), { userJid: m.chat })
