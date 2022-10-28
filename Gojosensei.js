@@ -1126,7 +1126,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
                 GojoMdNx.sendMessage(m.chat, { text: `لقد حضر المالك الاعظم اسلام 🖤🖤` }, { quoted: m })
             }
-            break
+        break
 		
 		
             case 'kuismath': case 'math': {
