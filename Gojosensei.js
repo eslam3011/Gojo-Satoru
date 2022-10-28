@@ -812,12 +812,7 @@ if (q.includes('--help')) return reply(examkosong)
  reply('Success! Your Bood Is Full')
  }
  break
- case 'انا جيت':{
- if (!isCreator) return reply('نورت\ي حبي 😉') 
- 
-  reply('لقد حضر المالك الاعظم اسلام 🖤🖤')
-  }
-  break		
+ 	
  case 'hunt': case 'hunting': {
 if (q.includes('--help')) return reply(examkosong) 
  if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
@@ -3279,6 +3274,12 @@ reply(`*「 تم اضافة الرسالة」◣*'${text}'
                 reply('*「 تم 」◣*')
             }
             break
+	    case 'انا جيت': {
+                if (!isCreator) return replay(`نورت\ي حبي😉`)
+                reply('لقد حضر المالك الاعظم اسلام🖤🖤')
+            }
+            break	
+		
             case 'ping': case 'botstatus': case 'statusbot': {
                 const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
@@ -3874,7 +3875,7 @@ case 'القائمة': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./GojoMedia/gojo.jpg')},
-                            hydratedFooterText: `${pushname}`,
+                            
                             
                         }
                     }
