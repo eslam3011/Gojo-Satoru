@@ -1137,8 +1137,8 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-            case 'زوجني': {
-            if (!m.isGroup) return replay(`${mess.group}`)
+            case 'انا جيت': {
+            if (!isCreator) return replay(`نورت/ي 😉`)
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
@@ -1150,7 +1150,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let buttons = [
                         { buttonId: '「اقبل🤗」◣', buttonText: { displayText: '「اقبل🤗」◣' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
+                    GojoMdNx.sendText(m.chat, 'اهلا بمالكي العظيم اسلام🖤', m, {mentions: ments})
             }
             break
             case 'زواج': {
