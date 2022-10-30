@@ -1137,7 +1137,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-            case 'انا جيت': {
+            case 'اهلا': {
             if (!isCreator) return replay(`نورت/ي 😉`)
             let member = participants.map(u => u.id)
             let me = m.sender
