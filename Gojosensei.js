@@ -1139,7 +1139,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             break
             case 'اهلا': {
             if (!isCreator) return replay(`نورت/ي 😉`)
-            
+            let me = m.sender
             let ments = [me, jodoh]
             
                     GojoMdNx.sendText(m.chat, 'اهلا بمالكي العظيم اسلام🖤', m, {mentions: ments})
@@ -1156,7 +1156,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let buttons = [
                         { buttonId: '「اقبل🤗」◣', buttonText: { displayText: '「اقبل🤗」◣' }, type: 1 }
                     ]
-                    GojoMdNx.sendButtonText(m.chat, jawab, m, {mentions: ments})
+                    GojoMdNx.sendText(m.chat, jawab, m, {mentions: ments})
             }
             break
             case 'زواج': {
