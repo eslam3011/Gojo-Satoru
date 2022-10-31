@@ -1139,18 +1139,24 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             break
             case 'اهلا': {
             if (!isCreator) return replay(`نورت/ي 😉`)
+            
+            let ments = [me, jodoh]
+            
+                    GojoMdNx.sendText(m.chat, 'اهلا بمالكي العظيم اسلام🖤', m, {mentions: ments})
+            }
+            break
+            case 'زوجني': {
+            if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `「مبروك واعتبره/ا زوجك/تك 🤡」◣
-
-@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-「اضغط اقبل اذا موافق 😂🤡」◣`
+@${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
             let ments = [me, jodoh]
             let buttons = [
                         { buttonId: '「اقبل🤗」◣', buttonText: { displayText: '「اقبل🤗」◣' }, type: 1 }
                     ]
-                    GojoMdNx.sendText(m.chat, 'اهلا بمالكي العظيم اسلام🖤', m, {mentions: ments})
+                    GojoMdNx.sendButtonText(m.chat, jawab, m, {mentions: ments})
             }
             break
             case 'زواج': {
@@ -1168,11 +1174,11 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: menst})
             }
             break
-            case 'is':
-				if (!text) return replay(`Use Text, Example : ${prefix + command} he married `)
-					const apa = [`Yes`, `No`, `It Could Be`, `Thats right`]
+            case 'هل':
+				if (!text) return replay(`Use Text, Example : ${prefix + command} هو متزوج `)
+					const apa = [`ايوة`, `لا`, `ممكن`, `اكيد` ,`اسأل امك`]
 					const kah = apa[Math.floor(Math.random() * apa.length)]
-GojoMdNx.sendMessage(from, { text: `Question : Is ${q}\nAnswer : ${kah}` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `Question : هل ${q}\nAnswer : ${kah}` }, { quoted: m })
 
 					break
 					            case 'what':
