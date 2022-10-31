@@ -1140,7 +1140,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             case 'اهلا': {
             if (!isCreator) return replay(`نورت/ي 😉`)
             let me = m.sender
-            let ments = [me, jodoh]
+            let ments = [me]
             
                     GojoMdNx.sendText(m.chat, 'اهلا بمالكي العظيم اسلام🖤', m, {mentions: ments})
             }
