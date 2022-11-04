@@ -137,7 +137,7 @@ module.exports = GojoMdNx = async (GojoMdNx, m, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const pushname = m.pushName || "No Name"
         const botNumber = await GojoMdNx.decodeJid(GojoMdNx.user.id)
-        const isCreator = isPremium || [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
+        const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const itsMe = m.sender == botNumber ? true : false
         const text = q = args.join(" ")
         const quoted = m.quoted ? m.quoted : m
@@ -1138,7 +1138,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             }
             break
             case 'اهلا': {
-            if (!isCreator) return replay(`نورت/ي 😉`)
+            if (!isCreator && !isPremium) return replay(`نورت/ي 😉`)
             let me = m.sender
             let ments = [me]
             
