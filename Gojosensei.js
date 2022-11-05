@@ -1137,12 +1137,12 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-            case 'اهلا': {
+            case 'اهلا': case 'هلو': case 'هاي' {
             if (!isCreator && !isPremium) return replay(`نورت/ي 😉`)
             let me = m.sender
             let ments = [me]
             
-                    GojoMdNx.sendText(m.chat, 'اهلا بمالكي العظيم اسلام🖤', m, {mentions: ments})
+                    GojoMdNx.sendText(m.chat, 'اهلا بمطوري العظيم 🖤🖤', m, {mentions: ments})
             }
             break
             case 'زوجني': {
@@ -1330,7 +1330,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
             }
             break  
             case 'انضم': {
-                if (!isCreator) return replay(`${mess.owner}`)
+                if (!isCreator && !isPremium) return replay(`${mess.owner}`)
                 if (!text) return replay(`Enter The Group Link!`)
                 if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return replay(`Invalid Link!`)
                 reply(mess.wait)
@@ -1384,13 +1384,13 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
 	}
 	break
         case 'حظر': {
-		if (!isCreator) return replay(`${mess.owner}`)
+		if (!isCreator && !isPremium) return replay(`${mess.owner}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await GojoMdNx.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
 	break
         case 'الغاء.حظر': {
-		if (!isCreator) return replay(`${mess.owner}`)
+		if (!isCreator && !isPremium) return replay(`${mess.owner}`)
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 		await GojoMdNx.updateBlockStatus(users, 'unblock').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
 	}
