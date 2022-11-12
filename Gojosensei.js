@@ -1196,7 +1196,7 @@ GojoMdNx.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, {
 					break
 case 'من':
 				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
-					const bisa = [`الغبي`,`الذكي'`,`المحترم`,`الشاذ]
+					const bisa = [`الغبي`,`الذكي'`,`المحترم`,`الشاذ`]
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
 GojoMdNx.sendMessage(from, { text: `Question : من ${q}\nAnswer : ${ga}` }, { quoted: m })
 
