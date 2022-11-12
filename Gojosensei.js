@@ -1229,8 +1229,8 @@ case 'ذكاء':
 GojoMdNx.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
 
 					break
-case'awesomecheck':
-  case'greatcheck': 
+case'حبي ':
+  case'كرهي ': 
     case 'gaycheck':
       case 'cutecheck':
         case 'lesbicheck':
