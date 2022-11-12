@@ -1194,11 +1194,11 @@ GojoMdNx.sendMessage(from, { text: `Question : هل ${q}\nAnswer : ${kah}` }, { 
 GojoMdNx.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, { quoted: m })
 
 					break
-case 'can':
+case 'من':
 				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
-					const bisa = [`Can`,`Can't`,`Cannot`,`Of Course You Can!!!`]
+					const bisa = [`الغبي`,`الذكي't`,`المحترم`,`Of Course You Can!!!`]
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
-GojoMdNx.sendMessage(from, { text: `Question : Can ${q}\nAnswer : ${ga}` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `Question : من ${q}\nAnswer : ${ga}` }, { quoted: m })
 
 					break
 case 'how':
