@@ -1177,14 +1177,14 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let buttons = [
                         { buttonId: '「 يب هم مناسبين لبعض😂🤡 」◣', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
                     ]
-                    await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: menst})
+                       GojoMdNx.sendText(m.chat, jawab, m, {mentions: menst})
             }
             break
             case 'هل':
 				if (!text) return replay(`Use Text, Example : ${prefix + command} هو متزوج `)
-					const apa = [`يوة`, `لا`, `ممكن`, `اكيد` ,`اسئل اختك`]
+					const apa = [`يوة`, `لا`, `ممكن`, `اكيد` ,`اسأل اختك`]
 					const kah = apa[Math.floor(Math.random() * apa.length)]
-GojoMdNx.sendMessage(from, { text: `Question : هل ${q}\nAnswer : ${kah}` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `السؤال : هل ${q}\nالاجابة : ${kah}` }, { quoted: m })
 
 					break
 					            case 'what':
@@ -1194,11 +1194,11 @@ GojoMdNx.sendMessage(from, { text: `Question : هل ${q}\nAnswer : ${kah}` }, { 
 GojoMdNx.sendMessage(from, { text: `Question : What ${q}\nAnswer : ${kahk}` }, { quoted: m })
 
 					break
-case 'من':
-				if (!text) return replay(`Use Text, Example : ${prefix + command} you fuck her lol `)
-					const bisa = [`الغبي`,`الذكي'`,`المحترم`,`الشاذ`]
+case 'مين':
+				if (!text) return replay(`استخدم اسم, مثال : ${prefix + command} اسلام `)
+					const bisa = [`الغبي`,`الذكي`,`المحترم`,`الشاذ` ,`احسن شخص شفته في حياتي` ,`الحب كله ❤️😋`]
 					const ga = bisa[Math.floor(Math.random() * bisa.length)]
-GojoMdNx.sendMessage(from, { text: `Question : من ${q}\nAnswer : ${ga}` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `السؤال : من ${q}\nالاجابة : ${ga}` }, { quoted: m })
 
 					break
 case 'how':
@@ -1212,25 +1212,25 @@ case 'شذوذ':
 				if (!text) return replay(`Use Text, Example : ${prefix + command} My Dp`)
 					const ra = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const te = ra[Math.floor(Math.random() * ra.length)]
-GojoMdNx.sendMessage(from, { text: `Rate : ${q}\nAnswer : *${te}%*` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `الاسم : ${q}\nالنسبة : *${te}%*` }, { quoted: m })
 
 					break
   case 'غباء':
 				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Xeon`)
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
-GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${teng}%*` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالنسبة : *${teng}%*` }, { quoted: m })
 
 					break
 case 'ذكاء':
 				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Xeon`)
 					const can = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
-GojoMdNx.sendMessage(from, { text: `*${command}*\n\nNama : ${q}\nAnswer : *${tik}%*` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالنسبة : *${tik}%*` }, { quoted: m })
 
 					break
-case'حبي ':
-  case'كرهي ': 
+case 'حبي':
+  case 'كرهي': 
     case 'gaycheck':
       case 'cutecheck':
         case 'lesbicheck':
@@ -1242,11 +1242,11 @@ case'حبي ':
 				if (!text) return replay(`Tag Someone, Example  : ${prefix + command} @Xeon`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
-GojoMdNx.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالنسبة : *${sange}%*` }, { quoted: m })
 					break
-					case 'charactercheck':
+					case 'شخصية':
 					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Xeon`)
-					const xeony =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
+					const xeony =['بتاع خوخ 😗🍑','كريم','بطل','متسامح','حقير','بخيل','بتاع بنات','ملك','صبور','ممل','متغطرس','كسلان']
 					const taky = xeony[Math.floor(Math.random() * xeony.length)]
 					GojoMdNx.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
@@ -3041,7 +3041,7 @@ ${id}`)
 		reply(txt)
 		}
 		break
-		   case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'squirrel':
+		   case 'دبة': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'squirrel':
                 try {
                 let set
                 if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
@@ -3342,8 +3342,9 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             }
             break
-	case 'owner': case 'creator': case 'المالك' : {
+	case 'المطور': case 'creator': case 'المالك' : {
                 GojoMdNx.sendContact(m.chat, global.owner, m)
+                GojoMdNx.sendContact(m.chat, global.premium, m)
             }
             break
 case 'cry':case 'kill':case 'hug':case 'pat':case 'lick':case 'kiss':case 'bite':case 'yeet':case 'neko':case 'bully':case 'bonk':case 'wink':case 'poke':case 'nom':case 'slap':case 'smile':case 'wave':case 'awoo':case 'blush':case 'smug':case 'glomp':case 'happy':case 'dance':case 'cringe':case 'cuddle':case 'highfive':case 'shinobu':case 'megumin':case 'handhold':
