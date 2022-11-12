@@ -1801,7 +1801,7 @@ break
                                 }
                             }]
                       let txt = `「 غوجو ساتورو موجود 🎉」\n\n${text}`
-                      GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb, btn)
+                      GojoMdNx.sendMessage(yoi, txt, global.thumb)
 		}
 		reply('「 تم 🤗 」◣')
             }
