@@ -1766,7 +1766,7 @@ break
                                 }
                             }]
                       let txt = `「 غوجو ساتورو موجود 🎉 」\n\n${text}`
-                      GojoMdNx.sendMessage(i, txt)
+                      GojoMdNx.sendText(i, txt, m, {mentions: menst})
                     }
                 reply(`「 تم  ✌ 」◣`)
             }
@@ -1800,7 +1800,7 @@ break
                                 }
                             }]
                       let txt = `「 غوجو ساتورو موجود 🎉」\n\n${text}`
-                      GojoMdNx.sendMessage(yoi, txt)
+                      GojoMdNx.sendText(yoi, txt, m, {mentions: menst})
 		}
 		reply('「 تم 🤗 」◣')
             }
