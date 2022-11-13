@@ -1280,13 +1280,13 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nتقييم : ${q}\nالتق�
       case 'رقاص':
       case 'بضان':
       case 'مستفز':
-      case 'عاقل':
+      case 'يحرق':
       case 'محتال':
       case 'نجس':
       case 'مؤدب':
       case 'غامض':
       case 'ظالم':	
-      case 'مبااع':
+      case 'كس':
       case 'صادق':
       case 'كذاب': {
             if (!m.isGroup) return replay(`${mess.group}`)
