@@ -1766,7 +1766,7 @@ break
                                 }
                             }]
                       let txt = `「 غوجو ساتورو موجود 🎉 」\n\n${text}`
-                      GojoMdNx.sendText(i, txt, m)
+                      GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb)
                     }
                 reply(`「 تم  ✌ 」◣`)
             }
@@ -1800,7 +1800,7 @@ break
                                 }
                             }]
                       let txt = `「 غوجو ساتورو موجود 🎉」\n\n${text}`
-                      GojoMdNx.sendText(yoi, txt, m)
+                      GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb)
 		}
 		reply('「 تم 🤗 」◣')
             }
