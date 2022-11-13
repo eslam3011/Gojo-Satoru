@@ -1171,8 +1171,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             let orang = member[Math.floor(Math.random() * member.length)]
             let jodoh = member[Math.floor(Math.random() * member.length)]
             let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-	    「 معلش زوجناكم لأنكم تصلحون لبعض 🤡 」◣
-	    「 الي يشوفهم مناسبين لبعض زيي يضغط يب 🤡 」◣`
+	    「 معلش زوجناكم لأنكم تصلحون لبعض 🤡 」◣`
             let menst = [orang, jodoh]
             let buttons = [
                         { buttonId: '「 يب هم مناسبين لبعض😂🤡 」◣', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
@@ -1767,7 +1766,7 @@ break
                                 }
                             }]
                       let txt = `「 غوجو ساتورو موجود 🎉 」\n\n${text}`
-                      GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb, btn)
+                      GojoMdNx.send5ButImg(i, txt, GojoMdNx.user.name, global.thumb)
                     }
                 reply(`「 تم  ✌ 」◣`)
             }
@@ -1801,7 +1800,7 @@ break
                                 }
                             }]
                       let txt = `「 غوجو ساتورو موجود 🎉」\n\n${text}`
-                      GojoMdNx.sendMessage(yoi, txt, global.thumb)
+                      GojoMdNx.send5ButImg(yoi, txt, GojoMdNx.user.name, global.thumb)
 		}
 		reply('「 تم 🤗 」◣')
             }
