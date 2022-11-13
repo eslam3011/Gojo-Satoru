@@ -1228,8 +1228,8 @@ case 'ذكاء':
 GojoMdNx.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالنسبة : *${tik}%*` }, { quoted: m })
 
 					break
-case 'حبي':
-  case 'كرهي': 
+case 'تقييم':
+  case 'حب': 
     case 'gaycheck':
       case 'cutecheck':
         case 'lesbicheck':
@@ -1241,7 +1241,7 @@ case 'حبي':
 				if (!text) return replay(`Tag Someone, Example  : ${prefix + command} @Xeon`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
-GojoMdNx.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالنسبة : *${sange}%*` }, { quoted: m })
+GojoMdNx.sendMessage(from, { text: `*${command}*\n\nتقييم : ${q}\nالتقييم : *${sange}%*` }, { quoted: m })
 					break
 					case 'شخصية':
 					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Xeon`)
@@ -1254,7 +1254,7 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالنس�
       case 'حمار':
       case 'ذكي':
       case 'منحرف':
-      case 'محبوب':
+      case 'ينعل':
       case 'كلب':
       case 'احمق':
       case 'قرد':
@@ -1278,7 +1278,7 @@ GojoMdNx.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالنس�
       case 'صنم':
       case 'شجاع':
       case 'رقاص':
-      case 'مضحك':
+      case 'بضان':
       case 'مستفز':
       case 'عاقل':
       case 'محتال':
