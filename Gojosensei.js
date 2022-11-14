@@ -1150,6 +1150,23 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
               reply('أوامرك حبي 😘✨')
             }
             break
+            
+            case 'apk': {
+              reply('انتظر شوي')
+              if (args.length == 0) return reply(`Example: ${prefix + command} Bgmi`)
+              query = args.join(' ')
+              get_result = await fetchJson(`https://dhn-api.herokuapp.com/api/apk/uapkpro?apps=${query}&page=1&apikey=cabd55849002ea851ce8`, { method: 'get' })
+              kontol = get_result.result
+              ini_txt = '❰ *APPLICATIONS* ❱\n\n'
+              for (var x of kontol) {
+                  ini_txt += `Name : ${x.apps_name}\n`
+                  ini_txt += `Link :${x.apps_linkdl}\n`
+                  ini_txt += `Tag : ${x.apps_tag}\n`
+                  ini_txt += `\n`
+               }
+            reply(ini_txt)
+            }
+            break
 
             case 'زوجني': {
             if (!m.isGroup) return replay(`${mess.group}`)
