@@ -1174,10 +1174,10 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
               //let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 666666666,status: 200, thumbnail: await getBuffer(picak+'Brodcast'), surface: 200, message: `© ${botname}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
               let ftroli = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `© ${botname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${GojoMdNx.user.name},;;;\nFN:${botname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': await getBuffer(picak+'Brodcast'), thumbnail: await getBuffer(picak+'Brodcast'),sendEphemeral: true}}}
               let anu = await store.chats.all().map(v => v.id)
-              reply(`*Send Broadcast To* ${anu.length} Chat\n*Time ${anu.length * 1.5} seconds*`)
+              reply(`جار ارسال رسائل الى ${anu.length} محادثات\n*في وقت  ${anu.length * 1.5} ثواني*`)
               for (let yoi of anu) {
                  await sleep(1500)
-                 GojoMdNx.sendMessage(yoi, {text:`${text}`}, {quoted:blessedtuna})
+                 GojoMdNx.sendMessage(yoi, {text:`${text}`})
               }
               reply('تم ارسال الرسائل بنجاح')
             }
