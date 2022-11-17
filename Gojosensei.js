@@ -1168,6 +1168,27 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             }
             break
 
+            case 'قول':
+             const gtts = require('./Zimbot/gtts')(args[0])
+              if (args.length < 1) return ZimBotInc.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
+              if (args.length < 2) return ZimBotInc.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
+              var dtt = body.slice(20)
+              reply(mess.wait)
+              var ranm = getRandom('.mp3')
+	                      var	rano = getRandom('.ogg')
+				      dtt.length > 300
+                        gtts.save(ranm, dtt, function() {
+                        exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+                        fs.unlinkSync(ranm)
+                        buffer = fs.readFileSync(rano)
+                        if (err) return reply('error')
+                        Ruri.sendMessage(from,  audio, {quoted: freply, ptt:true})
+                        ZimBotInc.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+                         fs.unlinkSync(rano)
+                         })
+                         })
+            break
+
             case 'زوجني': {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
