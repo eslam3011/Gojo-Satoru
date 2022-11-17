@@ -1170,8 +1170,8 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
 
             case 'قول':
              const gtts = require('./Zimbot/gtts')(args[0])
-              if (args.length < 1) return ZimBotInc.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
-              if (args.length < 2) return ZimBotInc.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
+              if (args.length < 1) return GojoMdNx.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
+              if (args.length < 2) return GojoMdNx.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
               var dtt = body.slice(20)
               reply(mess.wait)
               var ranm = getRandom('.mp3')
@@ -1183,10 +1183,18 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                         buffer = fs.readFileSync(rano)
                         if (err) return reply('error')
                         Ruri.sendMessage(from,  audio, {quoted: freply, ptt:true})
-                        ZimBotInc.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+                        GojoMdNx.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
                          fs.unlinkSync(rano)
                          })
                          })
+            break
+
+            case 'translate': case 'ترجم': case 'tr': {
+            tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=ar&kata=${args.join(" ")}`)
+            Infoo = tes.info
+            Detek = tes.translate
+            reply(`🌐Translate : ${Detek}\n`)
+            }
             break
 
             case 'زوجني': {
