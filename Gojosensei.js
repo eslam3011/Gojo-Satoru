@@ -1168,32 +1168,18 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
             }
             break
 
-            case 'قول':
-             const gtts = require('./Zimbot/gtts')(args[0])
-              if (args.length < 1) return GojoMdNx.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
-              if (args.length < 2) return GojoMdNx.sendMessage(from, `ᴇxᴀᴍᴘʟᴇ: ${prefix}ᴇɴ ʜᴇʟʟᴏ`, text, {quoted: m})
-              var dtt = body.slice(20)
-              reply(mess.wait)
-              var ranm = getRandom('.mp3')
-	                      var	rano = getRandom('.ogg')
-				      dtt.length > 300
-                        gtts.save(ranm, dtt, function() {
-                        exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
-                        fs.unlinkSync(ranm)
-                        buffer = fs.readFileSync(rano)
-                        if (err) return reply('error')
-                        Ruri.sendMessage(from,  audio, {quoted: freply, ptt:true})
-                        GojoMdNx.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
-                         fs.unlinkSync(rano)
-                         })
-                         })
-            break
-
-            case 'translate': case 'ترجم': case 'tr': {
-            tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=ar&kata=${args.join(" ")}`)
-            Infoo = tes.info
-            Detek = tes.translate
-            reply(`🌐Translate : ${Detek}\n`)
+            case 'ارسل': {
+              if (!isCreator) throw mess.owner
+              if (!text) throw `*Type some text*\n\nExample : ${prefix + command} zim-ot`
+              //let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 666666666,status: 200, thumbnail: await getBuffer(picak+'Brodcast'), surface: 200, message: `© ${botname}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+              let ftroli = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `© ${botname}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${GojoMdNx.user.name},;;;\nFN:${botname},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': await getBuffer(picak+'Brodcast'), thumbnail: await getBuffer(picak+'Brodcast'),sendEphemeral: true}}}
+              let anu = await store.chats.all().map(v => v.id)
+              reply(`*Send Broadcast To* ${anu.length} Chat\n*Time ${anu.length * 1.5} seconds*`)
+              for (let yoi of anu) {
+                 await sleep(1500)
+                 GojoMdNx.sendMessage(yoi, {text:`${text}`}, {quoted:blessedtuna})
+              }
+              reply('تم ارسال الرسائل بنجاح')
             }
             break
 
